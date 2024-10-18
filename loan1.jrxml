@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="loan1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4128895-3c5a-418a-a40d-5107ee892e5d">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     loan.`id` AS loan_id,
+     loan.`firstname` AS loan_firstname,
+     loan.`lastname` AS loan_lastname,
+     loan.`email` AS loan_email,
+     loan.`city` AS loan_city,
+     loan.`branchcode` AS loan_branchcode,
+     loan.`phno` AS loan_phno,
+     loan.`adharcard` AS loan_adharcard,
+     loan.`loanamount` AS loan_loanamount,
+     loan.`timeperiod` AS loan_timeperiod,
+     loan.`loantype` AS loan_loantype,
+     loan.`fromdate` AS loan_fromdate,
+     loan.`todate` AS loan_todate,
+     loan.`time` AS loan_time,
+     loan.`user_id` AS loan_user_id,
+     loan.`status` AS loan_status
+FROM
+     `loan` loan]]>
+	</queryString>
+	<field name="loan_id" class="java.lang.Integer"/>
+	<field name="loan_firstname" class="java.lang.String"/>
+	<field name="loan_lastname" class="java.lang.String"/>
+	<field name="loan_adharcard" class="java.lang.Long"/>
+	<field name="loan_city" class="java.lang.String"/>
+	<field name="loan_loanamount" class="java.lang.Long"/>
+	<field name="loan_phno" class="java.lang.Long"/>
+	<field name="loan_loantype" class="java.lang.String"/>
+	<field name="loan_fromdate" class="java.sql.Date"/>
+	<field name="loan_status" class="java.lang.String"/>
+	<group name="loan_id">
+		<groupExpression><![CDATA[$F{loan_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="368" y="23" width="119" height="42" uuid="a9a4f3d5-fce1-491d-a304-f5d7781f910d"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Loan]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="533b5498-1426-4a15-904e-5d0b0ffd7233"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="80" height="20" uuid="4e1eee67-88c6-4ba7-b8b0-2b318ff457e7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="80" height="20" uuid="bbf48056-3e86-47de-a453-d7eab436def2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="80" height="20" uuid="c3e9c19d-144d-40c5-be0f-8d03a20d5970"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[adharcard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="80" height="20" uuid="eb4c88c6-06d6-4fde-9185-16c86273204f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[city]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="80" height="20" uuid="d2452930-9dd2-4576-ac43-2f6fa81f4cee"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[loanamount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="80" height="20" uuid="549caad5-7080-4a4d-a0bc-d897e36b1b0c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[phno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="80" height="20" uuid="5c7fe965-03ef-4511-ad51-60f23715f43e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[loantype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="80" height="20" uuid="99921bd5-5c7f-473a-b31d-77323e817219"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[fromdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="720" y="0" width="80" height="20" uuid="cd19c0f8-255d-4bec-ba61-2d651f297b33"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" uuid="76a8f4f7-3f3f-47bb-8c15-91b648d57047"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="80" height="20" uuid="cb146838-8a61-40ae-ab99-8bfd596dbeb3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="80" height="20" uuid="d6ecb264-d8af-4166-beed-116c7fbd5505"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="80" height="20" uuid="e27d6098-3384-436e-8849-9da8ce4965fc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_adharcard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="80" height="20" uuid="37712888-38f7-415a-9c66-f63eb094f399"/>
+				<textFieldExpression><![CDATA[$F{loan_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="20" uuid="34cf9b72-66b5-4c6f-a9f7-83377e93b523"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_loanamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="80" height="20" uuid="74a094a5-73f5-4e72-8c39-d477bfab2740"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="80" height="20" uuid="62b4b567-1a96-4c18-86d6-0bf6e035e076"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_loantype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="80" height="20" uuid="8c94ca1f-fbd6-40c6-aeb5-2f240061fd24"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_fromdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="720" y="0" width="80" height="20" uuid="283c2f1c-2f80-4b41-8d3c-1fbaa27585ea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loan_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

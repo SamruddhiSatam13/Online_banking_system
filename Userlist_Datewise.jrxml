@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Userlist_Datewise" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e38f3bd-13b9-44fc-a351-7e84f022bd65">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     user_signup.`user_id` AS user_signup_user_id,
+     user_signup.`full_name` AS user_signup_full_name,
+     user_signup.`phno` AS user_signup_phno,
+     user_signup.`email` AS user_signup_email,
+     user_signup.`username` AS user_signup_username,
+     user_signup.`password` AS user_signup_password,
+     user_signup.`repassword` AS user_signup_repassword
+FROM
+     `user_signup` user_signup
+
+where
+user_id=$P{id};]]>
+	</queryString>
+	<field name="user_signup_user_id" class="java.lang.Integer"/>
+	<field name="user_signup_full_name" class="java.lang.String"/>
+	<field name="user_signup_phno" class="java.lang.Long"/>
+	<field name="user_signup_email" class="java.lang.String"/>
+	<field name="user_signup_username" class="java.lang.String"/>
+	<field name="user_signup_password" class="java.lang.String"/>
+	<field name="user_signup_repassword" class="java.lang.String"/>
+	<group name="user_signup_user_id">
+		<groupExpression><![CDATA[$F{user_signup_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="17" width="802" height="1" uuid="d6cfb818-6826-48a8-bd6c-57e0e2a38b83"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="d64d569b-50cd-4577-afe1-8c6f0a1ddace"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[user_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="f15c3f21-b61b-4886-be0f-1b9b1c4136f8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[full_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="296ef89c-54e2-4de2-843d-104d446bd615"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[phno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="e890aebc-08ae-4fc8-a02e-c87ba2adfda0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="871074bb-bc81-4e7e-a571-56c406a5a580"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="f580175c-4803-47ff-abb4-51b9cd28aef9"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="1c0abfa0-99b7-44e7-95ea-5b79bfd426fb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[repassword]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="802" height="1" uuid="85727ad7-e304-4fe4-885d-52aaba2f8fcb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="d6f5c779-fe9f-4abf-ac66-7dc79fa5f455"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="2ef2f883-6096-49f6-99e6-ac858b67e20c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="12d63c52-3f56-4ae1-8618-83eedaefc4f9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="74929ae1-184e-4841-8af8-664744302dd3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="be0f2760-cfb7-47fc-8bad-3fc2b26b3b9a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="e1f4e832-8aca-4207-862f-e582e9321ba2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="82b2ae88-a3f7-48ad-9e15-9a1246fdc08e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_repassword}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

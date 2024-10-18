@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cheque_form" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a74d46f2-6a4e-487d-ac95-d23ba41c1d94">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cheque_form.`id` AS cheque_form_id,
+     cheque_form.`user_id` AS cheque_form_user_id,
+     cheque_form.`cheque_no` AS cheque_form_cheque_no,
+     cheque_form.`accountno` AS cheque_form_accountno,
+     cheque_form.`accounttype` AS cheque_form_accounttype,
+     cheque_form.`signature` AS cheque_form_signature,
+     cheque_form.`status` AS cheque_form_status
+FROM
+     `cheque_form` cheque_form]]>
+	</queryString>
+	<field name="cheque_form_id" class="java.lang.Integer"/>
+	<field name="cheque_form_user_id" class="java.lang.Integer"/>
+	<field name="cheque_form_cheque_no" class="java.lang.Integer"/>
+	<field name="cheque_form_accountno" class="java.lang.Long"/>
+	<field name="cheque_form_accounttype" class="java.lang.String"/>
+	<field name="cheque_form_signature" class="java.lang.String"/>
+	<field name="cheque_form_status" class="java.lang.String"/>
+	<group name="cheque_form_id">
+		<groupExpression><![CDATA[$F{cheque_form_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="342" y="25" width="171" height="42" uuid="ab20fc86-fa6b-41fe-bec6-82a0947edd90"/>
+				<textElement>
+					<font size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cheque Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="16" width="798" height="1" uuid="bb418047-ce63-4ab7-84f2-ec8090c862cc"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="12b44c44-ad6c-4f10-b0ca-4de797329e01"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="155bde7c-603c-47d1-b602-e2d940af2ca3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="4a3c3e01-f0ad-4079-b058-655906703c59"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cheque No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="7b2ca4db-c67d-466d-99de-3645d438de2f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="7dc854ca-eb2a-46ca-a643-a93346cd7532"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Account Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="f14032e0-6993-4b91-a23c-f81f3a8b8de9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="fac435c7-9864-4655-b1f7-7a621fe118b0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="802" height="1" uuid="6cc07ab0-1394-42e8-817a-044ce2f8a7a1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="c74f1e79-3727-45ff-9105-55f14a7c51e1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="d8b1b6af-c9c6-45fc-a54f-2ab70ad1023a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="2c97e35c-eaad-480d-8ad5-a9b5094e376a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_cheque_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="69508a59-934d-466c-9d09-1733460a744d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_accountno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="1b5ae0a0-7525-4f79-bd0c-5a7d676c668e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_accounttype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="8fcd3114-83e7-4d27-9f28-df7c6617093f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_signature}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="68ba59b6-b031-41c2-b4a8-cb716d0b496f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="35" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

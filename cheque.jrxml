@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cheque" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3047e80-dba0-408d-b509-49476e43d79b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cheque_form.`id` AS cheque_form_id,
+     cheque_form.`user_id` AS cheque_form_user_id,
+     cheque_form.`accountno` AS cheque_form_accountno,
+     cheque_form.`accounttype` AS cheque_form_accounttype,
+     cheque_form.`signature` AS cheque_form_signature,
+     cheque_form.`status` AS cheque_form_status
+FROM
+     `cheque_form` cheque_form]]>
+	</queryString>
+	<field name="cheque_form_id" class="java.lang.Integer"/>
+	<field name="cheque_form_user_id" class="java.lang.Integer"/>
+	<field name="cheque_form_accountno" class="java.lang.Long"/>
+	<field name="cheque_form_accounttype" class="java.lang.String"/>
+	<field name="cheque_form_signature" class="java.lang.String"/>
+	<field name="cheque_form_status" class="java.lang.String"/>
+	<group name="cheque_form_id">
+		<groupExpression><![CDATA[$F{cheque_form_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="294" y="24" width="226" height="55" forecolor="#FF3333" uuid="eba4714b-4710-4343-9e96-884ea14ee4c7"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cheque List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="109" width="802" height="1" uuid="ca481386-aa51-45ce-bfd6-49de760d9636"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="133" height="20" uuid="c7471e61-27d5-4895-b56e-726e3d7f38c7"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="133" height="20" uuid="7cdd9edd-e196-440c-bb57-a01f146ab63e"/>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="133" height="20" uuid="f4874e30-d4be-446f-826c-393f043ee8e2"/>
+				<text><![CDATA[Account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="133" height="20" uuid="12dbd51c-03e7-43c0-b876-b008dbb396cd"/>
+				<text><![CDATA[Account Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="133" height="20" uuid="f0873faf-04ec-4a01-9be4-1c20c78be9fd"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="814" height="1" uuid="17f6fc6c-fc8c-4aca-ad3e-6ee89d9f6819"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="133" height="20" uuid="efb29461-fb78-4f8d-8c04-3f007aca1b05"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="133" height="20" uuid="609bb1a4-7d5a-4028-b604-697f59bd9a92"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="133" height="20" uuid="2cc9d83d-d40b-4ab6-82f8-0585a53bc789"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_accountno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="133" height="20" uuid="d4548442-043e-466a-a452-bba92e9754d4"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_accounttype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="133" height="20" uuid="a62aa584-2e85-46a2-9235-974c777cb76e"/>
+				<textFieldExpression><![CDATA[$F{cheque_form_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

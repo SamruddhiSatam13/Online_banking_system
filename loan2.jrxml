@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="loan2" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5cb711e6-600c-4f73-9b62-88616816b6ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     loan.`id` AS loan_id,
+     loan.`firstname` AS loan_firstname,
+     loan.`lastname` AS loan_lastname,
+     loan.`email` AS loan_email,
+     loan.`city` AS loan_city,
+     loan.`branchcode` AS loan_branchcode,
+     loan.`phno` AS loan_phno,
+     loan.`adharcard` AS loan_adharcard,
+     loan.`loanamount` AS loan_loanamount,
+     loan.`timeperiod` AS loan_timeperiod,
+     loan.`loantype` AS loan_loantype,
+     loan.`fromdate` AS loan_fromdate,
+     loan.`todate` AS loan_todate,
+     loan.`time` AS loan_time,
+     loan.`user_id` AS loan_user_id,
+     loan.`status` AS loan_status
+FROM
+     `loan` loan]]>
+	</queryString>
+	<field name="loan_id" class="java.lang.Integer"/>
+	<field name="loan_firstname" class="java.lang.String"/>
+	<field name="loan_lastname" class="java.lang.String"/>
+	<field name="loan_city" class="java.lang.String"/>
+	<field name="loan_phno" class="java.lang.Long"/>
+	<field name="loan_adharcard" class="java.lang.Long"/>
+	<field name="loan_loanamount" class="java.lang.Long"/>
+	<field name="loan_timeperiod" class="java.sql.Time"/>
+	<field name="loan_loantype" class="java.lang.String"/>
+	<field name="loan_fromdate" class="java.sql.Date"/>
+	<field name="loan_user_id" class="java.lang.Integer"/>
+	<field name="loan_status" class="java.lang.String"/>
+	<group name="loan_id">
+		<groupExpression><![CDATA[$F{loan_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="276" y="18" width="186" height="48" forecolor="#FF3333" uuid="3fda58c6-9bdf-4b0f-82fe-13ca7bf54575"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Loan Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="21" width="802" height="3" uuid="e5110e63-a3ba-4ad9-aa6a-af7c8cebd05c"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="66" height="20" uuid="cdf7e75e-ed26-4a0f-b2c2-6d2ee4379337"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="0" width="66" height="20" uuid="de830771-45fa-4020-8c62-87f6722b0a8c"/>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="66" height="20" uuid="48a3977a-03b5-4622-bb45-12546c443101"/>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="0" width="66" height="20" uuid="f0d2c496-9418-43a0-a20e-91540f16b6c9"/>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="66" height="20" uuid="81b81ebb-29bc-46e7-bf25-268cc8d2aae9"/>
+				<text><![CDATA[Phone No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="66" height="20" uuid="92289580-a3f7-4f72-99e4-8188c22725d7"/>
+				<text><![CDATA[AdharCard No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="66" height="20" uuid="716d75ac-2b6c-4f3e-98b2-b83770ad0a99"/>
+				<text><![CDATA[LoanAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="0" width="66" height="20" uuid="5a9959ca-05ee-44bf-ac2a-febcb64fb97a"/>
+				<text><![CDATA[TimePeriod]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="0" width="66" height="20" uuid="df728f25-efc7-420a-9ea4-cb302be9fe6b"/>
+				<text><![CDATA[Loanype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="0" width="66" height="20" uuid="83e5fdbc-89da-4121-92b5-91ed9435e204"/>
+				<text><![CDATA[FromDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="0" width="66" height="20" uuid="185df690-22d1-4677-9fb3-2da8a2aba91d"/>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="726" y="0" width="66" height="20" uuid="08b4996f-e03d-4ab6-89f1-c7587721ce44"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="47" width="802" height="1" uuid="9d908bda-f9b8-4f08-9443-3e60672b06b5"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="66" height="20" uuid="ea0c01e0-33b3-415f-962e-52b7d525b05c"/>
+				<textFieldExpression><![CDATA[$F{loan_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="0" width="66" height="20" uuid="a4851897-6803-4424-9595-67d9ae6a81fd"/>
+				<textFieldExpression><![CDATA[$F{loan_firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="66" height="20" uuid="65ed998a-7953-4a2d-94d4-e6471c57ed9d"/>
+				<textFieldExpression><![CDATA[$F{loan_lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="66" height="20" uuid="4e1bd515-885e-4fa7-ab95-5151e6de8755"/>
+				<textFieldExpression><![CDATA[$F{loan_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="66" height="20" uuid="02528d72-e135-4211-90e1-ee0dea481f11"/>
+				<textFieldExpression><![CDATA[$F{loan_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="66" height="20" uuid="cb0d03e4-0ffc-44da-b7cf-09eaa17aca59"/>
+				<textFieldExpression><![CDATA[$F{loan_adharcard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="66" height="20" uuid="f2146a28-5e74-4e45-92f8-26e82df36042"/>
+				<textFieldExpression><![CDATA[$F{loan_loanamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="66" height="20" uuid="0aa59d24-5686-4068-b01e-31783118e334"/>
+				<textFieldExpression><![CDATA[$F{loan_timeperiod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="0" width="66" height="20" uuid="8bb152d4-bdb9-48ef-9f0b-5f2878dfa37a"/>
+				<textFieldExpression><![CDATA[$F{loan_loantype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="594" y="0" width="66" height="20" uuid="5736de53-05be-46ad-a2a0-5e1aab31a55c"/>
+				<textFieldExpression><![CDATA[$F{loan_fromdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="672" y="0" width="54" height="20" uuid="8d8abff2-da09-4bcd-a087-eda051d270a6"/>
+				<textFieldExpression><![CDATA[$F{loan_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="726" y="0" width="66" height="20" uuid="eae6d536-5e40-4b7b-a6d1-3735eb3b297d"/>
+				<textFieldExpression><![CDATA[$F{loan_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

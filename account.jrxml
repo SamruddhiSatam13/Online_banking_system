@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="account" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82fb52fe-e491-4225-9b1e-b8f9d5cde7e5">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     new_acc.`id` AS new_acc_id,
+     new_acc.`user_id` AS new_acc_user_id,
+     new_acc.`firstname` AS new_acc_firstname,
+     new_acc.`lastname` AS new_acc_lastname,
+     new_acc.`address` AS new_acc_address,
+     new_acc.`city` AS new_acc_city,
+     new_acc.`birthdate` AS new_acc_birthdate,
+     new_acc.`phno` AS new_acc_phno,
+     new_acc.`adharcard` AS new_acc_adharcard,
+     new_acc.`gender` AS new_acc_gender,
+     new_acc.`email` AS new_acc_email,
+     new_acc.`image` AS new_acc_image,
+     new_acc.`signature` AS new_acc_signature,
+     new_acc.`accounttype` AS new_acc_accounttype,
+     new_acc.`amount` AS new_acc_amount,
+     new_acc.`account_number` AS new_acc_account_number
+FROM
+     `new_acc` new_acc
+where
+user_id=$P{id};]]>
+	</queryString>
+	<field name="new_acc_id" class="java.lang.Integer"/>
+	<field name="new_acc_user_id" class="java.lang.Integer"/>
+	<field name="new_acc_firstname" class="java.lang.String"/>
+	<field name="new_acc_lastname" class="java.lang.String"/>
+	<field name="new_acc_address" class="java.lang.String"/>
+	<field name="new_acc_city" class="java.lang.String"/>
+	<field name="new_acc_birthdate" class="java.sql.Date"/>
+	<field name="new_acc_phno" class="java.lang.String"/>
+	<field name="new_acc_adharcard" class="java.lang.Long"/>
+	<field name="new_acc_gender" class="java.lang.String"/>
+	<field name="new_acc_email" class="java.lang.String"/>
+	<field name="new_acc_image" class="java.lang.String"/>
+	<field name="new_acc_signature" class="java.lang.String"/>
+	<field name="new_acc_accounttype" class="java.lang.String"/>
+	<field name="new_acc_amount" class="java.lang.Long"/>
+	<field name="new_acc_account_number" class="java.lang.Long"/>
+	<group name="new_acc_user_id">
+		<groupExpression><![CDATA[$F{new_acc_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="15" width="802" height="1" uuid="987d04d0-1b51-488d-8de6-52544a5baace"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="20" uuid="e43beded-56f7-4719-8a67-177039758f0e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="72" height="20" uuid="d27d6f52-7fe6-4af9-9c5e-69620ee3383d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[user_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="72" height="20" uuid="1767d074-5435-4119-aab3-f472c2fc4cdb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="71" height="20" uuid="8c85fdfb-a3a9-48b4-9075-131b8754f675"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="72" height="20" uuid="1967434c-a105-4978-8a9e-37f46cc366ad"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[city]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="68" height="20" uuid="9d943189-6760-4284-a4ff-bc895a9705d5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[phno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="0" width="79" height="20" uuid="68681db6-f1a7-450f-96cf-f1958bb4d681"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[adharcard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="70" height="20" uuid="bdae6c68-57f6-4072-b60b-f937102ddb0d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="564" y="0" width="84" height="20" uuid="8193969a-93f2-465e-87ce-49343f779b9e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="648" y="0" width="72" height="20" uuid="611a1548-514b-45a2-ad90-3f20e411bb10"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[accounttype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="720" y="0" width="82" height="20" uuid="412c0f66-a2d1-4e05-9bf6-c7ff65ca035e"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[account_number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="802" height="1" uuid="af6c22a8-7b5d-45af-bfd0-27b1f9dfe25e"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="20" uuid="4d68d11b-ea07-45de-b974-186e3760af83"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="72" height="20" uuid="d0a71378-6917-45fe-8141-f3fc5d624490"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="72" height="20" uuid="218d60dd-c476-4c30-9df4-60ea13efa3be"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="71" height="20" uuid="a1451604-571b-4e0d-8b4b-7af8af51f040"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="72" height="20" uuid="3e5da57b-9cb7-47d1-90cb-22569975cf9c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="68" height="20" uuid="8ccd229a-40d6-406b-bfd5-3038ae808de7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="79" height="20" uuid="911a342b-9add-43a4-b5cb-442445ad26fb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_adharcard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="70" height="20" uuid="6433b9c5-c8c9-4517-9cac-ca1552e40f80"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="564" y="0" width="84" height="20" uuid="b542aaf2-0d3d-4ea8-8401-b1e7861c9ef5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="648" y="0" width="72" height="20" uuid="50b16d8f-e0a8-42a2-8762-b9f252880a9e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_accounttype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="720" y="0" width="82" height="20" uuid="578c8062-e1b1-4296-a7d7-13425191e4cc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{new_acc_account_number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

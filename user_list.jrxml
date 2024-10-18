@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="user_list" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="420bae67-bf47-4880-99fc-6e37d0ab4bbc">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_signup.`user_id` AS user_signup_user_id,
+     user_signup.`full_name` AS user_signup_full_name,
+     user_signup.`phno` AS user_signup_phno,
+     user_signup.`email` AS user_signup_email,
+     user_signup.`username` AS user_signup_username,
+     user_signup.`password` AS user_signup_password,
+     user_signup.`repassword` AS user_signup_repassword
+FROM
+     `user_signup` user_signup]]>
+	</queryString>
+	<field name="user_signup_user_id" class="java.lang.Integer"/>
+	<field name="user_signup_full_name" class="java.lang.String"/>
+	<field name="user_signup_phno" class="java.lang.Long"/>
+	<field name="user_signup_email" class="java.lang.String"/>
+	<field name="user_signup_username" class="java.lang.String"/>
+	<field name="user_signup_password" class="java.lang.String"/>
+	<field name="user_signup_repassword" class="java.lang.String"/>
+	<group name="user_signup_user_id">
+		<groupExpression><![CDATA[$F{user_signup_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<textField>
+				<reportElement x="325" y="26" width="175" height="33" backcolor="#FF0066" uuid="e16dcb98-2c89-480b-9528-f427c7a258a7"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[User Signup]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="17" width="802" height="1" uuid="e0a3c1dc-f8fa-458a-9641-e06ef99dd583"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="dbfce4ff-0501-4f93-9539-544e063212f7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="febe0954-0148-4fe2-bbae-4aba58cdb0de"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="b3827441-c14c-42e5-b720-0a3e8eb7726d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="fbd184a5-b2e4-482e-9249-63a1b569d0bd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="4a455db8-8030-43c0-b40f-a21b40ffd050"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="bb9c29cd-82ad-4036-b1a9-2a8be36bfb8b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="05af3def-8fec-44e8-88f2-a0275274d392"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="37" width="798" height="1" uuid="08eadf3b-a3f8-4889-9fa8-4bf8fb5d2caa"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="6464576b-c613-4a91-babf-b4d8259a5994"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="71c2bcca-c413-4985-8465-80fbfaac3a63"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="137b6f2e-73c7-42ca-8320-99e87da25619"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="c65e9bd3-cfe4-4364-af0d-d06219b88bd7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="815b05d1-fddb-4f8e-bda7-c1e00457d2aa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="0836d359-22d9-4e43-9c7b-e04d690bc001"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="29e0ff19-961f-4cc2-8dff-62861530816a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_repassword}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="37" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

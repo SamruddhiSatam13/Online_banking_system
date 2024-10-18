@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="online_statement" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="29960d98-89dd-4f0c-9b8c-7ef93aabf123">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     online_statement.`id` AS online_statement_id,
+     online_statement.`user_id` AS online_statement_user_id,
+     online_statement.`Date` AS online_statement_Date,
+     online_statement.`TransactionType` AS online_statement_TransactionType,
+     online_statement.`DebitAmount` AS online_statement_DebitAmount,
+     online_statement.`CreditAmount` AS online_statement_CreditAmount,
+     online_statement.`Balance` AS online_statement_Balance,
+     online_statement.`Accountno` AS online_statement_Accountno
+FROM
+     `online_statement` online_statement]]>
+	</queryString>
+	<field name="online_statement_id" class="java.lang.Integer"/>
+	<field name="online_statement_user_id" class="java.lang.Long"/>
+	<field name="online_statement_Date" class="java.sql.Date"/>
+	<field name="online_statement_TransactionType" class="java.lang.String"/>
+	<field name="online_statement_DebitAmount" class="java.lang.String"/>
+	<field name="online_statement_CreditAmount" class="java.lang.String"/>
+	<field name="online_statement_Balance" class="java.lang.String"/>
+	<field name="online_statement_Accountno" class="java.lang.String"/>
+	<group name="online_statement_id">
+		<groupExpression><![CDATA[$F{online_statement_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="26" width="178" height="35" forecolor="#FF3333" uuid="d3ac7fa6-02a4-4e33-bf62-b7b35ca616ba"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Online Statement]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="4" width="800" height="1" uuid="a63176f1-34cf-4747-af65-5f43b9517953"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b8d0e700-b468-4b83-b4a2-96b5bc4b49cc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="6b5aae07-a5fa-498c-ad44-d75f66af3d82"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="d1b35f50-a28f-4267-9add-d8f94b4379ac"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="914ac6c8-5895-4d06-9c71-d4145518e7b2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Transaction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="bf0a2201-e44f-44ad-a27e-85d2e95bbadb"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DebitAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="70546284-44b0-4de2-bef3-033a3df256ea"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CreditAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="20" uuid="22932b3f-c7ff-4657-bbe8-71fb812c7ac9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="7f5c99c7-9128-4175-b1b2-63239d445800"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Account Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="25" width="800" height="1" uuid="ac9bab9c-f61e-46d9-8eef-b6618585276e"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="32d9befc-1eee-40d3-b78f-b7d1c0c5e365"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="ac103845-73e8-460c-855d-ca1d424dc499"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="9432f864-f521-4cae-835a-f1a84699a312"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="dee9f3a0-9b9f-4fe7-9899-587bf0fe177c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_TransactionType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="e0e5d9b6-b20d-4fee-a3a1-7ac9b0fa0e87"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_DebitAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="4c39bb5e-5a7e-4456-b6ef-1a5ad8a45e0c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_CreditAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="81266e97-392c-4d68-a84c-98850905c02f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_Balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="3e754e9f-7e6e-4259-b29c-d961b8d9ce15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{online_statement_Accountno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch"/>
+	</summary>
+</jasperReport>

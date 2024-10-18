@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="user_list1hy" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="99839c94-6c74-4df9-af66-69593549dd53">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_signup.`user_id` AS user_signup_user_id,
+     user_signup.`full_name` AS user_signup_full_name,
+     user_signup.`phno` AS user_signup_phno,
+     user_signup.`email` AS user_signup_email,
+     user_signup.`username` AS user_signup_username,
+     user_signup.`password` AS user_signup_password,
+     user_signup.`repassword` AS user_signup_repassword
+FROM
+     `user_signup` user_signup]]>
+	</queryString>
+	<field name="user_signup_user_id" class="java.lang.Integer"/>
+	<field name="user_signup_full_name" class="java.lang.String"/>
+	<field name="user_signup_phno" class="java.lang.Long"/>
+	<field name="user_signup_email" class="java.lang.String"/>
+	<field name="user_signup_username" class="java.lang.String"/>
+	<field name="user_signup_password" class="java.lang.String"/>
+	<field name="user_signup_repassword" class="java.lang.String"/>
+	<group name="user_signup_user_id">
+		<groupExpression><![CDATA[$F{user_signup_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="371" y="18" width="141" height="40" forecolor="#FF3333" uuid="38ab707e-79ef-4652-a18f-253d8cc19087"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[User List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="13" width="802" height="3" uuid="72f5140e-4162-408b-af7c-b1173d077a69"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="7762b7d7-7f84-4547-b2b3-0a2a7387b125"/>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="9a416df2-0bff-439d-bad6-6445dcf87748"/>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="663d254c-e37e-43b6-a3a7-80acdd94c29c"/>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="76683cb1-bfad-4702-b491-91cdc7356136"/>
+				<text><![CDATA[Email Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="c1d0c209-49d4-46a0-9865-1dddb0559e39"/>
+				<text><![CDATA[UserName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="d1bbcf7d-5cad-4000-9483-0fef8fbb3a52"/>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="3ca4967c-b9c1-4ad6-92b5-97de4b50d9ea"/>
+				<text><![CDATA[Repassword]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="35" width="789" height="1" uuid="86128648-3d03-4b03-ad70-cd57046fa976"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="e498c4fd-25ad-4d72-97ea-c5a0461f7112"/>
+				<textFieldExpression><![CDATA[$F{user_signup_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="55f869a6-b272-4503-859c-0f059ae64b4b"/>
+				<textFieldExpression><![CDATA[$F{user_signup_full_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="a02ff7d4-9bce-450b-9bf2-1b82c0a995c4"/>
+				<textFieldExpression><![CDATA[$F{user_signup_phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="08f321d9-7517-4dc4-9a92-664a6e07a62e"/>
+				<textFieldExpression><![CDATA[$F{user_signup_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="cb0f9121-e531-49f1-ab14-110c8d91b5b4"/>
+				<textFieldExpression><![CDATA[$F{user_signup_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="7dfff235-3fb4-49e8-ab7d-7c501dc947fe"/>
+				<textFieldExpression><![CDATA[$F{user_signup_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="0fc89bc5-f4e0-4504-b0ec-bac959c98515"/>
+				<textFieldExpression><![CDATA[$F{user_signup_repassword}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
